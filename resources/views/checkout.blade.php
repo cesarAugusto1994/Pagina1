@@ -527,6 +527,41 @@
 
         </script>
 
+        <script type="text/javascript">
+           var horas = "0" + 00; ;
+           var minutos = 10;
+           minutos = "0" + minutos;
+           var segundos = 00;
+           var divs = document.querySelectorAll('#parcelas div');
+           
+           setInterval(function () {
+               if (segundos == 0) {
+                 segundos = 60;
+                 minutos--;
+                 minutos = "0" + minutos;
+               }
+            if (minutos >= 0 ){
+              segundos--;
+            }else{
+              minutos = "0" + 0;
+              segundos = "0" + 0;
+            }
+               var contador = [horas, minutos, segundos].forEach(function (parcela, i) {
+                   divs[i].innerHTML = parcela;
+               });
+
+           }, 1000);
+
+          jQuery(function($) {
+
+            $("body").on("click", "#btn-comprar", function(e) {
+              $.scrollTo('#dados_cadastrais', 500);
+              $('#nome').focus();
+              return false;
+            });
+          });
+        </script>
+
 
     </body>
 </html>

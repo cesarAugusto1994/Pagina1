@@ -12,7 +12,16 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return redirect()->route('checkout');
 });
 
-Route::get('/checkout', 'CheckoutController@index');
+Route::get('/checkout', 'CheckoutController@index')->name('checkout');
+
+Auth::routes();
+
+Route::prefix('admin')->group(function() {
+
+  Route::get('/', 'HomeController@index')->name('home');
+  Route::resource('produto', 'ProdutoController');
+
+});

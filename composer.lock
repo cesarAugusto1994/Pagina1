@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "7f1915ec708986f5c88e22e683d74275",
-    "content-hash": "b7904d07d1e1765a0a199aa11d6301a3",
+    "hash": "12ab0e9cb19d617b7ebacfd43d1da4a1",
+    "content-hash": "c3e612d6da170a10aac4a51ced409eb8",
     "packages": [
         {
             "name": "dnoegel/php-xdg-base-dir",
@@ -407,6 +407,59 @@
                 }
             ],
             "time": "2015-04-20 18:58:01"
+        },
+        {
+            "name": "jeroennoten/laravel-adminlte",
+            "version": "v1.23.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/jeroennoten/Laravel-AdminLTE.git",
+                "reference": "ff13c6d0c750d2d5667db01e617d8b21bcaab5b8"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/jeroennoten/Laravel-AdminLTE/zipball/ff13c6d0c750d2d5667db01e617d8b21bcaab5b8",
+                "reference": "ff13c6d0c750d2d5667db01e617d8b21bcaab5b8",
+                "shasum": ""
+            },
+            "require": {
+                "laravel/framework": "~5.1.12|~5.2.0|~5.3.0|~5.4.0|~5.5.0|~5.6.0",
+                "php": ">=5.5.9"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "~4.0"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "JeroenNoten\\LaravelAdminLte\\ServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "JeroenNoten\\LaravelAdminLte\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Jeroen Noten",
+                    "email": "jeroennoten@me.com"
+                }
+            ],
+            "description": "Easy AdminLTE integration with Laravel",
+            "keywords": [
+                "AdminLTE",
+                "admin",
+                "administrator",
+                "laravel"
+            ],
+            "time": "2018-02-07 22:22:38"
         },
         {
             "name": "laravel/framework",
@@ -909,6 +962,69 @@
                 "php"
             ],
             "time": "2018-03-25 17:35:16"
+        },
+        {
+            "name": "okipa/laravel-bootstrap-table-list",
+            "version": "1.2.5",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Okipa/laravel-bootstrap-table-list.git",
+                "reference": "3975a4aa6351913e73ad0574c4e821839ad585a4"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Okipa/laravel-bootstrap-table-list/zipball/3975a4aa6351913e73ad0574c4e821839ad585a4",
+                "reference": "3975a4aa6351913e73ad0574c4e821839ad585a4",
+                "shasum": ""
+            },
+            "require": {
+                "laravel/framework": "~5.0",
+                "php": ">=7.0"
+            },
+            "require-dev": {
+                "orchestra/database": "~3.0",
+                "orchestra/testbench": "~3.0"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Okipa\\LaravelBootstrapTableList\\TableListServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Okipa\\LaravelBootstrapTableList\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Arthur LORENT",
+                    "email": "arthur.lorent@gmail.com",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Because it is sometimes convenient to build a simple backoffice without sophisticated javascript treatments, Laravel Bootstrap Table List proposes a model-based and highly customizable php table list generation, that simply render your table HTML in your view, with a controller-side-configuration.",
+            "homepage": "https://github.com/Okipa/table-list",
+            "keywords": [
+                "bootstrap",
+                "entities",
+                "generate",
+                "generation",
+                "generator",
+                "html",
+                "laravel",
+                "list",
+                "okipa",
+                "php",
+                "table"
+            ],
+            "time": "2018-03-09 20:46:15"
         },
         {
             "name": "paragonie/random_compat",

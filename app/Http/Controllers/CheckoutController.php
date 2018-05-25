@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Produto;
 
 class CheckoutController extends Controller
 {
@@ -13,9 +14,19 @@ class CheckoutController extends Controller
      */
     public function index()
     {
-        # Produto
+        $produto = Produto::find(1);
 
-        return view('checkout');
+        #dd($produto);
+
+        $parcelas = 12;
+        $valorProduto = $produto->valor;
+        $valor = [];
+
+        for($i=1;$i<=$parcelas;$i++) {
+          $valor[$i] = number_format($valorProduto/$i, 2);
+        }
+
+        return view('checkout', compact('valor'));
     }
 
     /**

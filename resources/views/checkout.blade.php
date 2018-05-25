@@ -262,7 +262,7 @@
 
             <div class="row">
 
-                <form>
+                <form method="get" action="#">
 
                 <div class="col-md-6">
                     <div class="panel panel-default">
@@ -410,18 +410,9 @@
                               <div class="form-group">
                                   <label>Parcelamento</label>
                                   <select class="form-control" name="parcelamento" id="parcelamento">
-                                      <option value="1_139.00">1x de R$ 139,00</option>
-                                      <option value="2_72.63"> 2x de R$ 72,63</option>
-                                      <option value="3_49.13"> 3x de R$ 49,13</option>
-                                      <option value="4_37.39"> 4x de R$ 37,39</option>
-                                      <option value="5_30.34"> 5x de R$ 30,34</option>
-                                      <option value="6_25.65"> 6x de R$ 25,65</option>
-                                      <option value="7_22.30"> 7x de R$ 22,30</option>
-                                      <option value="8_19.79"> 8x de R$ 19,79</option>
-                                      <option value="9_17.84"> 9x de R$ 17,84</option>
-                                      <option value="10_16.29"> 10x de R$ 16,29</option>
-                                      <option value="11_15.01"> 11x de R$ 15,01</option>
-                                      <option value="12_13.96"> 12x de R$ 13,96</option>
+                                      @foreach($valor as $key => $item)
+                                        <option value="{{ $key }}_{{ $item }}">{{ $key }}x de R$ {{ number_format($item, 2, ',', '.') }}</option>
+                                      @endforeach
                                   </select>
                               </div>
 
@@ -533,7 +524,7 @@
            minutos = "0" + minutos;
            var segundos = 00;
            var divs = document.querySelectorAll('#parcelas div');
-           
+
            setInterval(function () {
                if (segundos == 0) {
                  segundos = 60;
